@@ -20,10 +20,6 @@ export const SecondScreen: FC = () => {
     setWords((prev) => prev.map((w, i) => (i === index ? value : w)))
   }, [])
 
-  const handleClearAll = useCallback(() => {
-    setWords(Array(TOTAL_SLOTS).fill(''))
-  }, [])
-
   const handleKeyDown = useCallback(
     (index: number, e: React.KeyboardEvent<HTMLInputElement>) => {
       if (e.key !== 'Enter') return
@@ -86,10 +82,6 @@ export const SecondScreen: FC = () => {
           </div>
         ))}
       </div>
-
-      <button type="button" className={s.clearAll} onClick={handleClearAll}>
-        Clear all
-      </button>
 
       <div className={s.actions}>
         <button
