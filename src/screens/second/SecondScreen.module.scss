@@ -1,9 +1,183 @@
 .root {
-  padding: 2rem;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background-color: #242426;
+  padding: 1.5rem;
+  padding-top: max(1.5rem, env(safe-area-inset-top));
+}
 
-  nav {
-    display: flex;
-    gap: 1rem;
-    margin-top: 1rem;
+.progress {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.progressSegment {
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #5dd08b;
+}
+
+.heading {
+  margin: 0 0 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+}
+
+.subtitle {
+  margin: 0 0 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #8e8e93;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.slot {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.75rem 1rem;
+  background-color: #1c1c1e;
+  border: 1px solid #3a3a3c;
+  border-radius: 10px;
+  cursor: default;
+  font-family: inherit;
+  text-align: left;
+  min-height: 44px;
+}
+
+.slotFilled {
+  border-color: #3a3a3c;
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.slotNumberEmpty {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.slotNumber {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.slotWord {
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.clearAll {
+  display: block;
+  margin: 0 auto 1.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #5dd08b;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.wordBank {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  padding: 0 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.wordChip {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: rgba(93, 208, 139, 0.25);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: opacity 0.15s;
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.wordChipUsed {
+  opacity: 0.2;
+  cursor: default;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: auto;
+  padding-bottom: max(1rem, env(safe-area-inset-bottom));
+}
+
+.backButton {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #5dd08b;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.nextButton {
+  flex: 1.5;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #3a3a3c;
+  border: none;
+  border-radius: 18px;
+  cursor: default;
+  font-family: inherit;
+  transition: background-color 0.2s;
+}
+
+.nextButtonActive {
+  background-color: #5dd08b;
+  color: #1c1c1e;
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.85;
   }
 }
