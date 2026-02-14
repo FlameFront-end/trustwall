@@ -4,8 +4,9 @@
   display: flex;
   flex-direction: column;
   background-color: #242426;
-  padding: 1.5rem;
-  padding-top: max(1.5rem, env(safe-area-inset-top));
+  padding: 1rem;
+  padding-top: max(1rem, env(safe-area-inset-top));
+  overflow-x: hidden;
 }
 
 .progress {
@@ -49,41 +50,40 @@
   display: flex;
   align-items: center;
   gap: 0.25rem;
-  padding: 0.75rem 1rem;
+  padding: 0.625rem 0.75rem;
   background-color: #1c1c1e;
   border: 1px solid #3a3a3c;
   border-radius: 10px;
-  cursor: default;
-  font-family: inherit;
-  text-align: left;
-  min-height: 44px;
-}
-
-.slotFilled {
-  border-color: #3a3a3c;
-  cursor: pointer;
-
-  &:active {
-    opacity: 0.7;
-  }
+  min-height: 40px;
+  min-width: 0;
 }
 
 .slotNumberEmpty {
-  font-size: 0.9375rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
 }
 
 .slotNumber {
-  font-size: 0.9375rem;
+  font-size: 0.8125rem;
   font-weight: 600;
   color: #ffffff;
+  flex-shrink: 0;
 }
 
-.slotWord {
-  font-size: 0.9375rem;
+.slotInput {
+  flex: 1;
+  min-width: 0;
+  width: 0;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 0.8125rem;
   font-weight: 600;
   color: #ffffff;
+  font-family: inherit;
+  padding: 0;
 }
 
 .clearAll {
@@ -101,37 +101,6 @@
   &:active {
     opacity: 0.7;
   }
-}
-
-.wordBank {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  justify-content: center;
-  padding: 0 0.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.wordChip {
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: #ffffff;
-  background-color: rgba(93, 208, 139, 0.25);
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-family: inherit;
-  transition: opacity 0.15s;
-
-  &:active {
-    opacity: 0.7;
-  }
-}
-
-.wordChipUsed {
-  opacity: 0.2;
-  cursor: default;
 }
 
 .actions {
