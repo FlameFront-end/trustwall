@@ -1,8 +1,8 @@
 import type { FC } from 'react'
 import { useNavigate } from 'react-router-dom'
 
+import backupImg from '@/shared/assets/backup-illustration.png'
 import { ROUTES } from '@/shared/model/routes'
-import { BackupIllustration } from './components'
 
 import s from './HomeScreen.module.scss'
 
@@ -16,7 +16,13 @@ export const HomeScreen: FC = () => {
     </header>
 
     <div className={s.content}>
-      <BackupIllustration />
+      <div className={s.illustrationWrapper}>
+        <img
+          src={backupImg}
+          alt="Back up secret phrase"
+          className={s.illustration}
+        />
+      </div>
       <h2 className={s.heading}>Back up secret phrase</h2>
       <p className={s.subtitle}>
         Protect your assets by backing up your seed phrase now.

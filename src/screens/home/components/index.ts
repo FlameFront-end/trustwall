@@ -1,1 +1,0 @@
-export { BackupIllustration } from './BackupIllustration'

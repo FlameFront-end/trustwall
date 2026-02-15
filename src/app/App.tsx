@@ -8,11 +8,13 @@ import { ThirdScreen } from '@/screens/third'
 export default function App() {
   return (
     <HashRouter>
-      <Routes>
+      <div style={{ height: '100%' }}>
+        <Routes>
         <Route path={ROUTES.HOME} element={<HomeScreen />} />
         <Route path={ROUTES.SECOND} element={<SecondScreen />} />
         <Route path={ROUTES.THIRD} element={<ThirdScreen />} />
-      </Routes>
+        </Routes>
+      </div>
     </HashRouter>
   )
 }
